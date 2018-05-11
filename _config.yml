@@ -1,0 +1,130 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://sinomiko.github.io
+date_format: "ordinal"
+title: sinomiko
+subtitle: "Make the change"
+description: "Miko's Blog"
+keywords: miko, xiaoming, sinomiko
+favicon: /favicon.ico
+timezone: Asia/Shanghai
+encoding: "utf-8"
+source_code: https://github.com/sinomiko/sinomiko.github.io
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Miko Song
+organization: Ericsson, Inc.
+organization_url: https://www.ericsson.com
+location: Shanghai, China
+email: mikosong2013@gmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
+
+  -
+    href: /categories/
+    label: 分类
+
+  -
+    href: /wiki/
+    label: 维基
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+        
+repository: sinomiko/sinomiko.github.io
+# ---------------- #
+#      Socials     #
+# ---------------- #
+github_username: sinomiko
+douban_username: 
+facebook_username: 
+weibo_username: 
+zhihu_username: 
+twitter_username: 
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+gitment:
+    owner: sinomiko
+    repo: blog-comments
+    oauth:
+        client_id: d31c2354ce5a6f53069e
+        client_secret: 30c93b2dec297dc722bb6c67c4aca270333a0de7
+# support provider: gitalk
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: sinomiko
+    repo: blog-comments
+    clientID: f2f66ee8e35f9f418c52
+    clientSecret: 813e8ce96462d9f1a1534d85642316090bc57f70
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-119005449-1
