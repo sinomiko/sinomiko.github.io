@@ -33,6 +33,9 @@ sudo systemctl start httpd.service
 之后我们就可以在浏览器中打开 ``http://your_server_IP_address/ ``
 
 我们新安装的网站，检查一下Apache是否安装成功，正常运行。
+![image](/assets/images/web/apacheHomePage.png)
+
+
 ### 修改防火墙设置
 如果在 **console** 用 **curl** 访问服务器有响应，而浏览器没响应，即防火墙限制了外包访问，设置防火墙允许80端口：
 
@@ -47,7 +50,7 @@ sudo firewall-cmd --reload
 ```
 这次可以正常访问了：
 
-![image](http://note.youdao.com/favicon.ico)
+![image](/assets/images/web/apacheHomePage.png)
 
 如果想以后重启服务器之后自动启动**Apache**服务器，可以运行以下命令：
 ```
@@ -146,7 +149,7 @@ sudo vi /var/www/html/info.php
 ``http://your_server_IP_address/info.php ``
 将会看到以下内容：
 
-![image](http://note.youdao.com/favicon.ico)
+![image](/assets/images/web/phpinfo.jpg)
 
 # 安装phpMyAdmin
 ``phpMyAdmin``是个管理``MariaDB``数据库的``Web``界面程序.
@@ -212,7 +215,7 @@ sudo systemctl restart httpd.service
 ```
 在浏览器输入``http://server_domain_or_IP/phpMyAdmin ``，可以看到：
 
-![image](http://note.youdao.com/favicon.ico)
+![image](/assets/images/web/phpMyAdmin.jpg)
 
 然后可以使用数据的``root``密码登录了。
 
@@ -279,7 +282,7 @@ define('DB_COLLATE', '');
 
 按照提示创建好博客，显示如下：
 
-![image](http://note.youdao.com/favicon.ico)
+![image](/assets/images/web/wordPressNotification.jpg)
 
 上图为已创建好的博客。
 
@@ -287,7 +290,7 @@ define('DB_COLLATE', '');
 
 http://server_domain_or_IP/wordpress/wp-login.php
 
-![image](http://note.youdao.com/favicon.ico)
+![image](/assets/images/web/wordPressLogin.jpg)
 
 # FAQ
 
