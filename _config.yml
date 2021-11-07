@@ -5,9 +5,9 @@ baseurl:
 url: https://sinomiko.github.io
 date_format: "ordinal"
 title: sinomiko
-subtitle: "Make the change"
+subtitle: "Do Better"
 description: "Miko's Blog"
-keywords: miko, xiaoming, sinomiko
+keywords: miko, mikosong, sinomiko
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -18,8 +18,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Miko Song
-organization: Ericsson, Inc.
-organization_url: https://www.ericsson.com
+worked_company: Baidu
+company_url: https://www.baidu.com
 location: Shanghai, China
 email: mikosong2013@gmail.com
 
