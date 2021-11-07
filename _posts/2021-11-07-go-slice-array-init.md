@@ -59,7 +59,6 @@ if thingMapping[rontCateID] == nil {
 }
 ```
 
-
 ### slice初始化
 ```
 SelectedTags := []*TagInfo{
