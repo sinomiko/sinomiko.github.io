@@ -14,7 +14,7 @@ encoding: "utf-8"
 # 页面左下角显示的年份
 since: 2015
 # 源码仓库，请替换成自己的
-repository: sinomiko/sinomiko.github.io
+repository: https://github.com/sinomiko/sinomiko.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
@@ -185,6 +185,6 @@ google:
     adsense:
         footer: true
         sidebar: false 
-        sidebar-detail: true 
-        content_header: false
-        content_footer: false
+        sidebar-detail: false 
+        content_header: true
+        content_footer: true
