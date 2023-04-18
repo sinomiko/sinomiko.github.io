@@ -143,10 +143,10 @@ disqus:
 # gitment 配置参考：https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: sinomiko
-    repo: blog-comments
+    repo: miko-blog
     oauth:
-        client_id: 8801174388338cea7cf4
-        client_secret: 1a962de65f7ec90d422ad03b5972e2ab892561bf
+        client_id: db1c8246ff81f4f3bfcc
+        client_secret: e6e5ab737d50a4354bb5bbf89ec57f58c25deaa2
 # gitalk 配置参考：https://github.com/gitalk/gitalk#install
 gitalk:
     owner: 
