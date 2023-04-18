@@ -1,4 +1,0 @@
----
-{  }---
-Please start blogging.
-hello

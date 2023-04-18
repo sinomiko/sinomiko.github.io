@@ -4,6 +4,12 @@ title: Centos配置LAMP并安装WordPress
 categories: [Web, Linux]
 description: 搭建LNMP环境及WordPress个人博客
 keywords: Web, LAMP
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
 ---
 
 # 安装LAMP环境

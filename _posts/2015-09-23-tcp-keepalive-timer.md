@@ -7,7 +7,12 @@ tags:
   - tcp
 time: 2016.02.9 14:22:00
 excerpt: 保活计时器并不是 TCP 规范中的一部分，是一个有争论的功能。
-
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
 ---
 
 

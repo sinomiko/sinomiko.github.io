@@ -1,4 +1,3 @@
-{% if site.url contains 'sinomiko.github.io' %}
-<h3>欢迎关注我的微信公众号</h3>
-<img style="border:1px solid #dddddd;height:192px;width:192px" src="{{ site.url }}/assets/images/qrcode_258.jpg" alt="后端技术指北" />
+{% if site.components.qrcode.enabled %}
+<img style="height:72px;width:72px" src="{{ site.url }}/assets/images/qrcode.jpg" alt="{{ site.components.qrcode.image_alt }}" />
 {% endif %}

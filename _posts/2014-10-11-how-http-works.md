@@ -4,6 +4,12 @@ title:  当我们打开网页时发生了什么
 keywords: HTTP
 categories : [web]
 tags : [http,dns,web]
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
 ---
 简单地来说，当我们在浏览器上输入URL的敲下回车的时候。
 

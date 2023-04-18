@@ -1,17 +1,19 @@
 - name: Software Engineer Keywords
   keywords:
-      - C/C++(11,14,17)
+      - Java
+      - C++
       - Python
-      - JAVA
       - Design Patterns
-      - AI
 
 - name: Mobile Developer Keywords
   keywords:
       - Android
+      - Reverse Engineering
 
-- name: Work Station Keywords
+- name: Windows Developer Keywords
   keywords:
-      - Win32
-      - MFC
-      - Linux
+      - Win32 SDK
+      - DuiLib
+      - WTL
+      - COM
+      - WinDbg

@@ -3,7 +3,12 @@ layout: post
 title:  处理并发之一：LINUX Epoll机制介绍
 keywords: 并发， I/O多路复用
 categories : Unix/Linux
-
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
 ---
 
 Epoll可是当前在Linux下开发大规模并发网络程序的热门人选，Epoll 在Linux2.6内核中正式引入，和select相似，其实都I/O多路复用技术而已，并没有什么神秘的。
