@@ -3,7 +3,7 @@ layout: page
 title: Fragments
 description: fragments 索引页
 keywords: fragments
-comments: false
+comments: true
 menu: 片段
 permalink: /fragments/
 ---
