@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2023-04-19-vscode-cpp-intelli-sense
+title: vscode cpp 插件
 categories: [vscode, cpp]
 description: vscode-cpp-intelli-sense
 keywords: vscode, cpp
