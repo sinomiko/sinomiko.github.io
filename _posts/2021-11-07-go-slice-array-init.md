@@ -1,17 +1,17 @@
-published: true
+---
 layout: post
-title: Go 使用技巧
-category: go
-tags: 
-  - go
+title:  go 一些初始化技巧
+categories: [go]
+description: go init
+keywords: go init, go
 time: 2021.11.7 11:46:00
-description: go 一些初始化技巧
 mermaid: false
 sequence: false
 flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+---
 # Go 使用技巧
 
 ## 设计rpc使用go协程

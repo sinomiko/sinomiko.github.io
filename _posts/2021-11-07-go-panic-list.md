@@ -1,17 +1,16 @@
-published: true
+---
 layout: post
 title: go panic记录汇总
-category: go
-tags: 
-  - go
-time: 2021.11.7 11:20:00
-description: go panic
+categories: [go, go panic]
+description: sgo panic
+keywords: go panic, go
 mermaid: false
 sequence: false
 flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
+---
 
 # go panic记录汇总
 ## waitGroup没有add，直接done，panic无法recover，会导致进程直接退出
