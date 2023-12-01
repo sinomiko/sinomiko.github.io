@@ -12,14 +12,15 @@ mindmap: false
 mindmap2: false
 ---
 
-# c++ 函数forward
+# c++ 函数 `forward`
 
-c++ forward一般来说减少数据拷贝，能提升程序性能；用在function上会有什么效果；
-预期应该是`use_func`` 更高效
+c++ `forward` 一般来说减少数据拷贝，能提升程序性能；用在function上会有什么效果；
+预期应该是 `use_func` 更高效
 
 ## cpp debug
 
 - 代码比较
+
 ```cpp
 #include<array>
 #include<stdio.h>
@@ -61,6 +62,7 @@ int main(int argc, char* argv[]) {
     use_func3(lambda3);
 }
 ```
+
 放到godbolt 查看汇编代码
 
 
@@ -311,7 +313,11 @@ typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{la
 ## 结论
 从上面可以看到， 比较所有的汇编代码，实际情况 在使用function 值传递（`use_func3`）反而更高效;
 
-总结起来就是只要不涉及大块内存数据分配，通常情况使用值传递能更高效。
+总结:
+- 只要不涉及大块内存数据分配，通常情况使用值传递能更高效。
+- 涉及大块内存数据分配使用`std::ref(lambda)`
+
+
 
 ## 参考
 [how-to-pass-lambda-functions-in-C++/](https://johannesugb.github.io/cpu-programming/how-to-pass-lambda-functions-in-C++/)
