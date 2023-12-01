@@ -17,9 +17,8 @@ mindmap2: false
 c++ `forward` 一般来说减少数据拷贝，能提升程序性能；用在function上会有什么效果；
 预期应该是 `use_func` 更高效
 
-## cpp debug
+## 代码比较
 
-- 代码比较
 
 ```cpp
 #include<array>
