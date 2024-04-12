@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
 
 - 汇编代码
 
-使用 -O0
+使用gcc 13.2 -O0
 
 ```x86asm
 .LC0:
@@ -308,13 +308,151 @@ typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{la
         .quad   typeinfo for std::thread::_State
 ```
 
+- 汇编代码
+
+使用gcc 13.2 -O3
+
+```x86asm
+.LC0:
+        .string "This lambda is invoked from %d, %d"
+std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >::_M_run():
+        mov     edx, DWORD PTR [rdi+408]
+        mov     esi, 100
+        mov     edi, OFFSET FLAT:.LC0
+        xor     eax, eax
+        jmp     printf
+std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >::_M_run():
+        mov     edx, DWORD PTR [rdi+408]
+        mov     esi, 100
+        mov     edi, OFFSET FLAT:.LC0
+        xor     eax, eax
+        jmp     printf
+std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >::_M_run():
+        mov     edx, DWORD PTR [rdi+408]
+        mov     esi, 100
+        mov     edi, OFFSET FLAT:.LC0
+        xor     eax, eax
+        jmp     printf
+main:
+        push    rbx
+        mov     ebx, edi
+        mov     edi, 416
+        sub     rsp, 32
+        ;use use_func
+        mov     QWORD PTR [rsp+16], 0
+        call    operator new(unsigned long)
+        mov     edx, OFFSET FLAT:_ZNSt6thread24_M_thread_deps_never_runEv
+        lea     rsi, [rsp+24]
+        lea     rdi, [rsp+16]
+        mov     QWORD PTR [rax], OFFSET FLAT:vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >+16
+        mov     DWORD PTR [rax+408], ebx
+        mov     QWORD PTR [rsp+24], rax
+        call    std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)())
+        lea     rdi, [rsp+24]
+        call    std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >::~unique_ptr() [complete object destructor]
+        lea     rdi, [rsp+16]
+        call    std::thread::join()
+        cmp     QWORD PTR [rsp+16], 0
+        jne     .L23
+        ;use use_func2
+        mov     QWORD PTR [rsp+8], 0
+        mov     edi, 416
+        call    operator new(unsigned long)
+        mov     edx, OFFSET FLAT:_ZNSt6thread24_M_thread_deps_never_runEv
+        lea     rsi, [rsp+24]
+        lea     rdi, [rsp+8]
+        mov     QWORD PTR [rax], OFFSET FLAT:vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >+16
+        mov     DWORD PTR [rax+408], ebx
+        mov     QWORD PTR [rsp+24], rax
+        call    std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)())
+        lea     rdi, [rsp+24]
+        call    std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >::~unique_ptr() [complete object destructor]
+        lea     rdi, [rsp+8]
+        call    std::thread::join()
+        cmp     QWORD PTR [rsp+8], 0
+        jne     .L23
+        ;use use_func3
+        mov     edi, 416
+        mov     QWORD PTR [rsp], 0
+        call    operator new(unsigned long)
+        mov     edx, OFFSET FLAT:_ZNSt6thread24_M_thread_deps_never_runEv
+        lea     rsi, [rsp+24]
+        mov     rdi, rsp
+        mov     QWORD PTR [rax], OFFSET FLAT:vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >+16
+        mov     DWORD PTR [rax+408], ebx
+        mov     QWORD PTR [rsp+24], rax
+        call    std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)())
+        lea     rdi, [rsp+24]
+        call    std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >::~unique_ptr() [complete object destructor]
+        mov     rdi, rsp
+        call    std::thread::join()
+        cmp     QWORD PTR [rsp], 0
+        jne     .L23
+        add     rsp, 32
+        xor     eax, eax
+        pop     rbx
+        ret
+.L23:
+        call    std::terminate()
+        mov     rdi, rax
+        jmp     .L22
+        mov     rbx, rax
+        jmp     .L19
+        mov     rdi, rax
+        jmp     .L30
+        mov     rbx, rax
+        jmp     .L29
+        mov     rdi, rax
+        jmp     .L27
+        mov     rbx, rax
+        jmp     .L25
+main.cold:
+typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >:
+        .quad   vtable for __cxxabiv1::__si_class_type_info+16
+        .quad   typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >
+        .quad   typeinfo for std::thread::_State
+typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >:
+        .string "*NSt6thread11_State_implINS_8_InvokerISt5tupleIJZ4mainEUlvE_EEEEEE"
+typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >:
+        .quad   vtable for __cxxabiv1::__si_class_type_info+16
+        .quad   typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >
+        .quad   typeinfo for std::thread::_State
+typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >:
+        .string "*NSt6thread11_State_implINS_8_InvokerISt5tupleIJZ4mainEUlvE0_EEEEEE"
+typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >:
+        .quad   vtable for __cxxabiv1::__si_class_type_info+16
+        .quad   typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >
+        .quad   typeinfo for std::thread::_State
+typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >:
+        .string "*NSt6thread11_State_implINS_8_InvokerISt5tupleIJZ4mainEUlvE1_EEEEEE"
+vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >:
+        .quad   0
+        .quad   typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >::~_State_impl() [complete object destructor]
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >::~_State_impl() [deleting destructor]
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#1}> > >::_M_run()
+vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >:
+        .quad   0
+        .quad   typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >::~_State_impl() [complete object destructor]
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >::~_State_impl() [deleting destructor]
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#2}> > >::_M_run()
+vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >:
+        .quad   0
+        .quad   typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >::~_State_impl() [complete object destructor]
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >::~_State_impl() [deleting destructor]
+        .quad   std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lambda()#3}> > >::_M_run()
+```
 
 ## 结论
-从上面可以看到， 比较所有的汇编代码，实际情况 在使用function 值传递（`use_func3`）反而更高效;
-
+从上面可以看到，
+- 比较 `O0 ` 所有的汇编代码， 在使用function 值传递（`use_func3`）反而更高效;
+- 比较 `O2 ` 所有的汇编代码，都是一样的效率;
 总结:
 - 只要不涉及大块内存数据分配，通常情况使用值传递能更高效。
 - 涉及大块内存数据分配使用`std::ref(lambda)`
+- `O2 ` 级别优化后效率是等同的
 
 
 
