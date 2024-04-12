@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
 
 - 汇编代码
 
-使用gcc 13.2 -O0
+[使用gcc 13.2 -O0](https://godbolt.org/z/6YPMzPfsj)
 
 ```x86asm
 .LC0:
@@ -310,7 +310,7 @@ typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{la
 
 - 汇编代码
 
-使用gcc 13.2 -O3
+[使用gcc 13.2 -O3](https://godbolt.org/z/KbhxfxT8v)
 
 ```x86asm
 .LC0:
