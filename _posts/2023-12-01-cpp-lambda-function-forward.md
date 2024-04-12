@@ -449,6 +449,8 @@ vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<main::{lamb
 从上面可以看到，
 - 比较 `O0 ` 所有的汇编代码， 在使用function 值传递（`use_func3`）反而更高效;
 - 比较 `O2 ` 所有的汇编代码，都是一样的效率;
+
+
 总结:
 - 只要不涉及大块内存数据分配，通常情况使用值传递能更高效。
 - 涉及大块内存数据分配使用`std::ref(lambda)`
